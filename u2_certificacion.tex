@@ -1,0 +1,321 @@
+% ============================================================
+% UNIDAD 2: AERONAVEGABILIDAD, CERTIFICACIÓN Y DOCUMENTACIÓN
+% ============================================================
+\clearpage
+\section*{UNIDAD 2: AERONAVEGABILIDAD Y CERTIFICACIÓN}
+\subsection*{Aeronaves, mantenimiento, partes y documentación técnica}
+
+\begin{recuadro}
+\textbf{Objetivo de la unidad:} comprender qué significa que una aeronave sea
+\textbf{aeronavegable}, cómo se certifican el diseño, cada avión, el mantenimiento y las partes,
+qué documentación respalda todo ese proceso y qué estándares (ATA, ISO, AN, MS, NAS, MIL) usa a
+diario un técnico aviónico.
+\end{recuadro}
+
+% ------------------------------------------------------------
+\section*{1. ¿QUÉ ES LA AERONAVEGABILIDAD?}
+
+Una aeronave es \textbf{aeronavegable} cuando cumple dos condiciones a la vez:
+\begin{enumerate}
+  \item \textbf{Está conforme a su diseño aprobado} (certificado tipo), incluidas todas las
+        modificaciones aprobadas; y
+  \item \textbf{está en condiciones de operar en forma segura}: su desgaste, su estado y su
+        mantenimiento son los adecuados.
+\end{enumerate}
+Si falta cualquiera de las dos, la aeronave no es aeronavegable, aunque ``vuele''. Un avión con un
+transpondedor instalado sin aprobación, o con una inspección vencida, no es aeronavegable.
+
+\paragraph*{La certificación es todo lo que hace que un avión, una persona o un taller estén
+habilitados oficialmente para volar o para trabajar en aviación.} Conviene pensarla como
+\textbf{tres cosas que se certifican} (la aeronave, las personas y las organizaciones) más la
+\textbf{documentación} que lo respalda. Esta unidad trata la aeronave y la documentación; la
+Unidad 3, las personas; la Unidad 4, las organizaciones.
+
+% ------------------------------------------------------------
+\section*{2. EL CICLO DE VIDA DE LA CERTIFICACIÓN DE UNA AERONAVE}
+
+\begin{center}
+\begin{tikzpicture}[node distance=0.35cm, every node/.style={font=\small, align=center},
+  paso/.style={draw=ppAzul, very thick, rounded corners, fill=ppAzul!8, text width=2.6cm,
+  minimum height=1.25cm}]
+  \node[paso] (a) {\textbf{Diseño}\\ Certificado tipo};
+  \node[paso, right=of a] (b) {\textbf{Producción}\\ Certificado de producción};
+  \node[paso, right=of b] (c) {\textbf{Cada avión}\\ Certificado de aeronavegabilidad};
+  \node[paso, right=of c] (d) {\textbf{Toda su vida}\\ Aeronavegabilidad continuada};
+  \draw[-{Stealth}, thick] (a) -- (b);
+  \draw[-{Stealth}, thick] (b) -- (c);
+  \draw[-{Stealth}, thick] (c) -- (d);
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\small
+\begin{tabular}{|p{0.27\linewidth}|p{0.18\linewidth}|p{0.45\linewidth}|}
+\hline
+\textbf{Documento} & \textbf{Quién lo obtiene} & \textbf{Qué certifica} \\ \hline
+\textbf{Certificado tipo} (con su hoja de datos, \textbf{TCDS}) & El fabricante & Que el
+\textbf{diseño} de un modelo de avión, motor o hélice cumple las normas de aeronavegabilidad
+(RAAC 21 y 23/25/27/29). \\ \hline
+\textbf{Certificado tipo suplementario} (STC) & Quien diseña una modificación & Que una
+\textbf{modificación mayor} al diseño (por ejemplo, instalar una nueva aviónica integrada) es
+aceptable. \\ \hline
+\textbf{Certificado de producción} & El fabricante & Que puede fabricar en serie aeronaves o
+partes iguales al diseño aprobado. \\ \hline
+\textbf{Certificado de aeronavegabilidad} & Cada avión individual & Que \textbf{ese avión}
+coincide con el diseño aprobado y está en condiciones de volar seguro. Sigue válido solo si se
+mantiene según el programa de mantenimiento aprobado. Puede ser estándar o especial (restringido,
+experimental, deportivo liviano, permiso especial de vuelo). \\ \hline
+\textbf{Directiva de aeronavegabilidad} (AD) & La emite la autoridad & Una inspección o
+modificación \textbf{obligatoria} ante un problema descubierto en servicio. \\ \hline
+\textbf{Aprobación para el retorno al servicio} & La firma una persona u organización habilitada
+& Que, después de un trabajo de mantenimiento, el avión quedó aeronavegable. Esa firma tiene
+\textbf{responsabilidad legal}. \\ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{2.1. Aeronavegabilidad continuada}
+Una vez en servicio, la aeronave debe seguir siendo aeronavegable. Eso se logra con:
+\begin{itemize}
+  \item el \textbf{programa de mantenimiento} aprobado (inspecciones por horas de vuelo, ciclos o
+        calendario);
+  \item el cumplimiento de las \textbf{directivas de aeronavegabilidad (AD)};
+  \item la evaluación de los \textbf{boletines de servicio (SB)} del fabricante: son
+        recomendaciones, salvo que una AD los haga obligatorios;
+  \item el control de los \textbf{componentes de vida limitada} (que deben retirarse al cumplir
+        un número de horas o ciclos);
+  \item los \textbf{registros} de todo lo realizado.
+\end{itemize}
+
+\begin{recuadro}
+\textbf{Caso: UPS 2976 (Louisville, EE.\,UU., 4 de noviembre de 2025).} Un MD-11F de carga
+perdió el motor izquierdo junto con su pilón durante el despegue y se estrelló; murieron los 3
+tripulantes y 11 personas en tierra. La investigación de la NTSB encontró fisuras por fatiga en
+un componente del montaje del pilón, y que el fabricante había documentado en 2011 fallas
+anteriores de esa pieza en una carta de servicio, sin considerarlas un riesgo para la seguridad
+del vuelo. Después del accidente, la FAA emitió \textbf{directivas de aeronavegabilidad de
+emergencia} que obligaron a inspeccionar todos los MD-11 y DC-10 antes de volver a volar.
+\textbf{Para discutir:} ¿qué diferencia hay entre una recomendación del fabricante y una AD? ¿Qué
+rol juegan el operador y su programa de mantenimiento?
+\end{recuadro}
+
+% ------------------------------------------------------------
+\section*{3. EL MANTENIMIENTO SEGÚN LA RAAC PARTE 43}
+
+La \textbf{RAAC 43} define qué es mantenimiento y cómo debe hacerse y registrarse.
+
+\begin{center}
+\small
+\begin{tabular}{|p{0.26\linewidth}|p{0.64\linewidth}|}
+\hline
+\textbf{Término} & \textbf{Significado} \\ \hline
+Mantenimiento & Inspección, revisión general (\textit{overhaul}), reparación, conservación y
+reemplazo de partes. \\ \hline
+Mantenimiento preventivo & Tareas menores y simples de conservación y reemplazo de pequeñas
+partes estándar, que no requieren operaciones de montaje complejas. La regulación las enumera.
+\\ \hline
+Reparación / alteración \textbf{mayor} & Puede afectar de manera apreciable el peso, el
+balance, la resistencia estructural, el funcionamiento de los motores, las características de
+vuelo u otras cualidades de aeronavegabilidad, o no puede hacerse con prácticas elementales.
+Requiere \textbf{datos aprobados} y un formulario específico. \\ \hline
+Reparación / alteración \textbf{menor} & Toda la que no es mayor. \\ \hline
+Reconstrucción & Restaurar un producto a la condición de ``nuevo'', con partes nuevas o
+equivalentes. \\ \hline
+Retorno al servicio & Declaración, firmada por persona habilitada, de que el producto quedó
+aeronavegable. \\ \hline
+\end{tabular}
+\end{center}
+
+\paragraph*{¿Quién puede hacer mantenimiento y aprobar el retorno al servicio?}
+Según los alcances de cada uno: el titular de una \textbf{licencia} de mecánico con las
+habilitaciones correspondientes (RAAC 65), un \textbf{Taller Aeronáutico de Reparación} (RAAC 145)
+a través de su representante técnico, un \textbf{explotador} con su propia organización de
+mantenimiento (RAAC 121 o 135) y el \textbf{fabricante} para sus productos.
+
+\paragraph*{El registro del trabajo.}
+Todo trabajo debe quedar registrado en los historiales de la aeronave, motor, hélice o componente,
+con al menos: \textbf{descripción del trabajo} (o referencia a datos aceptables), \textbf{fecha},
+\textbf{nombre, firma y número de licencia} de quien aprueba el retorno al servicio. Las
+reparaciones y alteraciones mayores se documentan además en un formulario específico (equivalente
+al formulario 337 de la FAA). \textbf{Si no está registrado, para la ley no se hizo.}
+
+% ------------------------------------------------------------
+\section*{4. LOS DOCUMENTOS DE LA AERONAVE}
+
+\subsubsection*{4.1. Documentos a bordo}
+\begin{itemize}
+  \item \textbf{Certificado de matrícula} (Registro Nacional de Aeronaves). La matrícula argentina
+        empieza con \textbf{LV} (o LQ para aeronaves del Estado).
+  \item \textbf{Certificado de aeronavegabilidad} vigente.
+  \item \textbf{Manual de vuelo} aprobado (AFM) con sus limitaciones.
+  \item \textbf{Licencia de la estación de radio} de a bordo.
+  \item \textbf{Libro de a bordo} o registro técnico de vuelo, donde se anotan los vuelos y las
+        fallas observadas.
+  \item \textbf{Licencias y certificados médicos} de la tripulación; seguro obligatorio.
+\end{itemize}
+
+\subsubsection*{4.2. Historiales y registros de mantenimiento}
+Historial de la célula, de cada motor y de cada hélice; registro del cumplimiento de AD;
+control de componentes de vida limitada; tarjetas de trabajo (\textit{task cards}); peso y
+balanceo actualizado; lista de equipos instalados.
+
+\subsubsection*{4.3. Manuales técnicos}
+\begin{center}
+\small
+\begin{tabular}{|p{0.16\linewidth}|p{0.74\linewidth}|}
+\hline
+\textbf{Sigla} & \textbf{Manual} \\ \hline
+AMM & \textit{Aircraft Maintenance Manual}: procedimientos de mantenimiento de la aeronave. \\
+\hline
+IPC / IPB & \textit{Illustrated Parts Catalog}: catálogo ilustrado de partes con sus números de
+parte (P/N) e intercambiabilidad. \\ \hline
+WDM & \textit{Wiring Diagram Manual}: diagramas de cableado; el manual más usado por el técnico
+aviónico. \\ \hline
+SRM & \textit{Structural Repair Manual}: reparaciones estructurales. \\ \hline
+CMM & \textit{Component Maintenance Manual}: mantenimiento de un componente en taller (por
+ejemplo, un transceptor VHF). \\ \hline
+MPD & \textit{Maintenance Planning Document}: tareas e intervalos para armar el programa de
+mantenimiento. \\ \hline
+MEL / MMEL & Lista de equipo mínimo: qué equipos pueden estar inoperativos y en qué condiciones
+se puede despachar el avión igual. \\ \hline
+FIM / TSM & Manual de aislamiento de fallas: guía de diagnóstico a partir de un mensaje o
+síntoma. \\ \hline
+\end{tabular}
+\end{center}
+Los manuales deben estar en su \textbf{última revisión}: trabajar con una copia vieja o
+impresa ``para tenerla a mano'' es una causa clásica de errores.
+
+% ------------------------------------------------------------
+\section*{5. LAS PARTES AERONÁUTICAS}
+
+Una parte solo puede instalarse en una aeronave si es una \textbf{parte aprobada} y está
+acompañada de su \textbf{documentación de aeronavegabilidad}, que garantiza su origen y su estado:
+\begin{itemize}
+  \item \textbf{Formulario FAA 8130-3} o \textbf{EASA Form 1}: certificado de liberación
+        autorizada de una parte nueva o reparada.
+  \item \textbf{Certificado de conformidad} del fabricante.
+  \item Partes fabricadas bajo \textbf{TSO} (orden técnica estándar), \textbf{PMA} (aprobación de
+        fabricación de partes) o \textbf{partes estándar} reconocidas (AN, MS, NAS).
+\end{itemize}
+
+\paragraph*{Estados de una parte.} \textit{Serviciable} (lista para instalar, con su etiqueta y
+certificado), \textit{inservible} o \textit{reparable} (con etiqueta roja o amarilla, separada
+físicamente), \textit{chatarra} (debe inutilizarse para que no vuelva al circuito).
+
+\begin{recuadro}
+\textbf{Partes no aprobadas sospechosas (SUP).} Son partes de origen dudoso: falsificadas,
+recuperadas de aviones accidentados sin control, con documentación adulterada o fuera de vida
+útil. Están entre los riesgos más graves del mantenimiento. Señales de alerta: precio muy bajo,
+documentación incompleta o fotocopiada, marcas borradas, vendedor desconocido. Ante la duda,
+\textbf{la parte no se instala} y se reporta a la autoridad.
+\end{recuadro}
+
+% ------------------------------------------------------------
+\section*{6. LOS ESTÁNDARES DE LA DOCUMENTACIÓN}
+
+\subsubsection*{6.1. ATA 100 / ATA iSpec 2200}
+La \textbf{especificación ATA 100} (hoy integrada en la \textbf{ATA iSpec 2200}) organiza toda la
+documentación técnica en \textbf{capítulos numerados} iguales para todos los fabricantes. Así, el
+sistema de comunicaciones está en el capítulo 23 tanto en un Boeing como en un Airbus o un
+Embraer. La referencia completa tiene tres pares de números: \textbf{capítulo -- sección -- tema}.
+Por ejemplo, \texttt{23-11-00} es el sistema de HF dentro de Comunicaciones.
+
+\begin{center}
+\small
+\begin{tabular}{|c|p{0.32\linewidth}||c|p{0.32\linewidth}|}
+\hline
+\textbf{Cap.} & \textbf{Sistema} & \textbf{Cap.} & \textbf{Sistema} \\ \hline
+05 & Límites de tiempo, inspecciones & 31 & \textbf{Instrumentos indicadores y registradores} \\
+\hline
+12 & Servicio (carga de fluidos) & 32 & Tren de aterrizaje \\ \hline
+20 & Prácticas estándar & 33 & \textbf{Luces} \\ \hline
+21 & Aire acondicionado & 34 & \textbf{Navegación} \\ \hline
+\textbf{22} & \textbf{Piloto automático} & 42 & \textbf{Aviónica modular integrada} \\ \hline
+\textbf{23} & \textbf{Comunicaciones} & 44 & \textbf{Sistemas de cabina (entretenimiento)} \\
+\hline
+\textbf{24} & \textbf{Energía eléctrica} & 45 & \textbf{Sistema central de mantenimiento} \\ \hline
+26 & Protección contra incendio & 46 & \textbf{Sistemas de información} \\ \hline
+28 & Combustible & 49 & APU (unidad de potencia auxiliar) \\ \hline
+30 & Protección contra hielo y lluvia & 71--80 & Motor \\ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection*{6.2. ATA 104}
+La especificación \textbf{ATA 104} define cómo se estructura la \textbf{capacitación} del personal
+de mantenimiento en niveles crecientes: desde la familiarización general con la aeronave hasta
+el nivel de mantenimiento de línea y base, y la especialización en sistemas o componentes. Es la
+base de los cursos de tipo que dan los fabricantes y los centros de instrucción.
+
+\subsubsection*{6.3. Normas de partes y componentes: AN, MS, NAS, MIL}
+\begin{center}
+\small
+\begin{tabular}{|p{0.13\linewidth}|p{0.36\linewidth}|p{0.40\linewidth}|}
+\hline
+\textbf{Norma} & \textbf{Origen} & \textbf{Ejemplos} \\ \hline
+\textbf{AN} & \textit{Army--Navy}: normas militares conjuntas de EE.\,UU. (desde los años 40). &
+Bulones AN3 a AN20, tuercas AN365, arandelas AN960. \\ \hline
+\textbf{MS} & \textit{Military Standard}: reemplazó a muchas normas AN. & Remaches MS20470,
+tornillos MS24693, terminales y empalmes de cableado. \\ \hline
+\textbf{NAS} & \textit{National Aerospace Standard}: normas de la industria aeroespacial de EE.\,UU.
+& Tornillos NAS1352, bulones de alta resistencia NAS6203. \\ \hline
+\textbf{MIL} & \textit{Military Specifications} y estándares militares. & Cable MIL-W-22759,
+conectores MIL-DTL-38999, bus de datos \textbf{MIL-STD-1553}. \\ \hline
+\end{tabular}
+\end{center}
+Las normas fijan material, dimensiones, tolerancias, tratamientos y ensayos. Por eso un tornillo
+aeronáutico \textbf{nunca se reemplaza ``por uno parecido''}, sino por el \textbf{número de parte
+exacto} del catálogo ilustrado.
+
+\begin{recuadro}
+\textbf{Caso: British Airways 5390 (Reino Unido, 1990).} Al reemplazar el parabrisas del piloto
+de un BAC 1-11, un supervisor eligió los tornillos ``a ojo'' en el depósito, sin consultar el
+catálogo: 84 de los 90 tornillos eran apenas más finos que los especificados. En vuelo, la presión
+de cabina arrancó el parabrisas y el comandante quedó parcialmente fuera de la cabina; la
+tripulación logró aterrizar y no hubo víctimas fatales. El caso muestra el valor del número de
+parte, del catálogo y de la verificación independiente.
+\end{recuadro}
+
+\subsubsection*{6.4. Otros estándares que usa un técnico aviónico}
+\begin{itemize}
+  \item \textbf{ARINC:} estándares de la industria para aviónica (por ejemplo, el bus de datos
+        \textbf{ARINC 429} y los formatos de equipos y bandejas).
+  \item \textbf{RTCA DO-160:} ensayos ambientales de equipos de a bordo (temperatura, vibración,
+        interferencia electromagnética). \textbf{DO-178C} y \textbf{DO-254}: desarrollo de
+        software y hardware de aviónica.
+  \item \textbf{ISO 9001} (gestión de la calidad) y sus versiones aeroespaciales \textbf{AS/EN
+        9100} (fabricantes), \textbf{AS9110} (organizaciones de mantenimiento) y \textbf{AS9120}
+        (distribuidores). Se conectan con el sistema de calidad que exige la RAAC 145.
+\end{itemize}
+
+% ------------------------------------------------------------
+\section*{7. CÓMO SE CONECTA TODO}
+Cada trabajo de mantenimiento recorre la misma cadena:
+\begin{enumerate}
+  \item Un técnico \textbf{con licencia (RAAC 65)}
+  \item trabaja en un \textbf{taller certificado (RAAC 145)},
+  \item sigue el \textbf{manual del fabricante, organizado por capítulos ATA},
+  \item usa \textbf{partes aprobadas, con su documentación} y que cumplen las normas AN, MS, NAS
+        o MIL,
+  \item registra el trabajo y \textbf{firma el retorno al servicio} (RAAC 43),
+  \item y así el avión mantiene su \textbf{certificado de aeronavegabilidad}.
+\end{enumerate}
+
+% ------------------------------------------------------------
+\section*{8. ACTIVIDADES DE LA UNIDAD}
+\begin{enumerate}
+  \item \textbf{Recorrido de certificación:} tomar un trabajo de aviónica (por ejemplo, reemplazar
+        un receptor VOR) y seguir todo el recorrido: ubicar el capítulo ATA del sistema;
+        verificar el número de parte del componente en el catálogo; revisar si hay directivas
+        de aeronavegabilidad aplicables; completar el registro de mantenimiento; indicar quién
+        puede firmar el retorno al servicio y con qué licencia.
+  \item \textbf{Verificación de aeronavegabilidad simulada:} con un juego de documentos de una
+        aeronave (reales o preparados por el docente), verificar documentos a bordo, vencimientos
+        de inspecciones, cumplimiento de AD y componentes de vida limitada. Informar si la
+        aeronave es aeronavegable y por qué.
+  \item \textbf{¿Mayor o menor?} Clasificar una lista de trabajos (cambiar una lámpara, instalar un
+        GPS con pantalla nueva en el panel, reparar un cable, reemplazar un transpondedor por otro
+        del mismo P/N) en mantenimiento preventivo, alteración menor o mayor.
+  \item \textbf{Tabla comparativa de estándares} ISO, AN, MS, NAS y MIL, con su aplicación en
+        mantenimiento y documentación técnica, y un ejemplo de pieza del taller de la escuela.
+  \item \textbf{Partes sospechosas:} con tres certificados de partes (uno correcto, uno incompleto,
+        uno adulterado), decidir cuál se acepta y redactar el informe de rechazo.
+\end{enumerate}

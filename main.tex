@@ -1,0 +1,66 @@
+% Compilador en Overleaf: pdfLaTeX (el que viene por defecto)
+% Manual: Seguridad Operacional y Gestión en Operaciones Aéreas
+%         Entorno: Legislación Aeronáutica — 7mo año, Técnico/a en Aviónica
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\IfFileExists{spanish.ldf}{\usepackage[spanish,es-noshorthands]{babel}}{}
+\usepackage{lmodern} % tipografía estándar de LaTeX (Computer Modern)
+\usepackage[a4paper,top=3cm,bottom=2.5cm,left=2.5cm,right=2cm,headheight=15pt,footskip=1.1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+
+% ---------- Formato general
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlist[itemize]{itemsep=1pt,topsep=2pt,parsep=0pt}
+\setlist[enumerate]{itemsep=1pt,topsep=2pt,parsep=0pt}
+\renewcommand{\arraystretch}{1.15}
+\newtcolorbox{recuadro}{enhanced,breakable,colback=white,colframe=black,
+  boxrule=0.6pt,arc=0pt,left=5pt,right=5pt,top=3pt,bottom=3pt}
+\titleformat{\section}{\large\bfseries\centering}{}{0pt}{}
+\titleformat{\subsection}{\large\bfseries\itshape\centering}{}{0pt}{\underline}
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\titlespacing*{\subsubsection}{0pt}{10pt}{3pt}
+\titlespacing*{\paragraph}{0pt}{6pt}{0.6em}
+\newcommand{\casilla}{\raisebox{-0.12em}{\tikz\draw[thick] (0,0) rectangle (0.34,0.34);}}
+
+% ---------- Encabezado y pie (mismo diseño que el manual de Emprendimientos)
+\definecolor{ppAzul}{rgb}{0.267,0.447,0.769}
+\definecolor{ppAzulClaro}{rgb}{0.557,0.667,0.859}
+\fancypagestyle{materia}{%
+  \fancyhf{}%
+  \fancyhead[L]{\color{ppAzul}\bfseries\itshape 7mo Año}%
+  \fancyhead[R]{\color{ppAzul}\bfseries\itshape Seguridad Operacional y Gestión}%
+  \fancyfoot[L]{\small\color{ppAzulClaro}\itshape scicolonejulian@impatrq.com}%
+  \fancyfoot[C]{\raisebox{-0.7\height}{\includegraphics[height=0.8cm]{logos/logo-impa}}}%
+  \fancyfoot[R]{\small\color{ppAzulClaro}\itshape\thepage}%
+  \renewcommand{\headrule}{{\color{ppAzul}\hrule height 0.5pt}}%
+  \renewcommand{\footrule}{{\color{ppAzul}\hrule height 0.5pt}\vspace{2pt}}%
+}
+
+\begin{document}
+\input{caratula}
+\pagestyle{materia}
+\setcounter{page}{2}
+\input{presentacion}      % Fundamentación, objetivos, organización y hoja de ruta
+\input{u1_derecho}        % Unidad 1: derecho aeronáutico y rol regulador del Estado
+\input{u2_certificacion}  % Unidad 2: aeronavegabilidad, certificación y documentación técnica
+\input{u3_licencias}      % Unidad 3: licencias, representante técnico y oficina técnica
+\input{u4_organizaciones} % Unidad 4: organizaciones aeronáuticas y gestión del mantenimiento
+\input{u5_factores}       % Unidad 5: actuación humana, MRM y primeros auxilios
+\input{actividad_mrm}     % Actividad práctica: simulación de pase de turno (MRM)
+\input{u6_seguridad}      % Unidad 6: prevención de accidentes y SMS
+\input{u7_operaciones}    % Unidad 7: operaciones aéreas, espacio aéreo y cartas
+\input{proyecto_sms}      % Proyecto integrador: SMS del taller de la escuela
+\end{document}
