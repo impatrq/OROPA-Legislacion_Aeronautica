@@ -1,0 +1,284 @@
+% ============================================================
+% UNIDAD 5: ACTUACIÓN HUMANA
+% ============================================================
+\clearpage
+\section*{UNIDAD 5: ACTUACIÓN HUMANA}
+\subsection*{Factores humanos, error, MRM, reportes y primeros auxilios}
+
+\begin{recuadro}
+\textbf{Objetivo de la unidad:} reconocer que el desempeño humano es un factor crítico en el
+mantenimiento aeronáutico, identificar los factores que lo afectan, entender cómo se producen los
+errores y aplicar herramientas para prevenirlos, reportarlos e investigarlos (MRM y MEDA).
+Incluye una práctica de primeros auxilios adaptada al entorno del hangar.
+\end{recuadro}
+
+% ------------------------------------------------------------
+\section*{1. POR QUÉ IMPORTAN LOS FACTORES HUMANOS}
+
+Los aviones modernos son muy confiables, pero los opera, controla y mantiene gente. En la gran
+mayoría de los accidentes e incidentes aparece, entre las causas, algún \textbf{factor humano}:
+una decisión, una omisión, una mala comunicación, una presión de la organización. El estudio de
+los \textbf{factores humanos} busca entender cómo trabajan las personas para diseñar tareas,
+equipos, procedimientos y organizaciones que \textbf{reduzcan la posibilidad de error y atrapen
+los errores antes de que causen daño}.
+
+\paragraph*{El modelo SHELL.}
+Representa a la persona (\textbf{L}, \textit{Liveware}) en el centro, en relación con:
+\begin{center}
+\begin{tikzpicture}[every node/.style={font=\small, align=center},
+  b/.style={draw=ppAzul, very thick, fill=ppAzul!10, minimum width=1.5cm, minimum height=1.5cm}]
+  \node[b, fill=ppAzul!35] (L) at (0,0) {\textbf{L}\\ persona};
+  \node[b] (S) at (0,1.75) {\textbf{S}};
+  \node[b] (H) at (-1.75,0) {\textbf{H}};
+  \node[b] (E) at (1.75,0) {\textbf{E}};
+  \node[b] (L2) at (0,-1.75) {\textbf{L}};
+  \node[anchor=west, text width=8cm, align=left] at (3.2,1.2) {\textbf{S} -- \textit{Software}:
+  procedimientos, manuales, listas de verificación, símbolos.};
+  \node[anchor=west, text width=8cm, align=left] at (3.2,0.2) {\textbf{H} -- \textit{Hardware}:
+  herramientas, equipos, la aeronave, el diseño de los accesos.};
+  \node[anchor=west, text width=8cm, align=left] at (3.2,-0.8) {\textbf{E} -- \textit{Environment}:
+  entorno físico (luz, ruido, frío) y organizacional (turnos, presión).};
+  \node[anchor=west, text width=8cm, align=left] at (3.2,-1.8) {\textbf{L} -- \textit{Liveware}:
+  las otras personas (compañeros, supervisores, pilotos).};
+\end{tikzpicture}
+\end{center}
+Los errores suelen aparecer en las \textbf{interfaces}, donde ``no encajan'' la persona y lo
+demás: un manual confuso (L--S), un conector al que no se llega (L--H), un hangar oscuro (L--E),
+un pase de turno mal hecho (L--L).
+
+% ------------------------------------------------------------
+\section*{2. FACTORES QUE AFECTAN EL RENDIMIENTO}
+
+\begin{center}
+\small
+\begin{tabular}{|p{0.22\linewidth}|p{0.68\linewidth}|}
+\hline
+\textbf{Tipo} & \textbf{Ejemplos} \\ \hline
+Físicos & Visión (agudeza, colores: clave para identificar cables), audición, fuerza, tamaño
+corporal. \\ \hline
+Fisiológicos & \textbf{Fatiga} y falta de sueño, trabajo nocturno (ritmo circadiano), hambre,
+deshidratación, enfermedad, \textbf{alcohol, drogas y medicamentos}. \\ \hline
+Psicológicos & Estrés, atención y distracción, memoria, percepción, motivación, exceso de
+confianza o \textbf{complacencia}. \\ \hline
+Entorno físico & Iluminación, ruido, temperatura, clima, espacio de trabajo reducido, trabajo en
+altura. \\ \hline
+Organización del trabajo & Turnos largos, presión de tiempo, falta de personal o de repuestos,
+procedimientos inadecuados, cultura de la empresa. \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{recuadro}
+\textbf{La fatiga se parece al alcohol.} Estudios clásicos mostraron que estar despierto unas
+17 horas seguidas deteriora el desempeño de manera comparable a tener 0,5 gramos de alcohol por
+litro de sangre, y estar despierto 24 horas, a 1 g/l. Nadie trabajaría ``borracho'' en un avión;
+sin embargo, trabajar sin dormir es frecuente. Por eso las organizaciones gestionan las horas de
+trabajo y descanso, y cada técnico debe reconocer cuándo no está en condiciones.
+\end{recuadro}
+
+% ------------------------------------------------------------
+\section*{3. LA DOCENA SUCIA}
+
+Gordon Dupont, de Transport Canada, identificó doce condiciones que más a menudo llevan a errores
+de mantenimiento. Se conocen como la \textbf{docena sucia} (\textit{Dirty Dozen}):
+
+\begin{center}
+\small
+\begin{tabular}{|c|p{0.27\linewidth}|p{0.57\linewidth}|}
+\hline
+\textbf{N°} & \textbf{Factor} & \textbf{Defensa} \\ \hline
+1 & Falta de comunicación & Pase de turno por escrito; confirmar lo entendido. \\ \hline
+2 & Complacencia & Verificar siempre como si fuera la primera vez. \\ \hline
+3 & Falta de conocimiento & Capacitación; consultar el manual; preguntar. \\ \hline
+4 & Distracción & Marcar dónde quedó el trabajo; volver tres pasos atrás al retomarlo. \\ \hline
+5 & Falta de trabajo en equipo & Planificar juntos; compartir información. \\ \hline
+6 & Fatiga & Descansar; reconocer los síntomas; pedir doble control. \\ \hline
+7 & Falta de recursos & Pedir las herramientas y partes correctas; no improvisar. \\ \hline
+8 & Presión & Comunicar si no se llega; ``mejor tarde que nunca''. \\ \hline
+9 & Falta de asertividad & Decir lo que se piensa, con respeto y con datos. \\ \hline
+10 & Estrés & Pausas; tomar las cosas de a una; pedir ayuda. \\ \hline
+11 & Falta de conciencia situacional & Pensar qué puede pasar después; preguntarse ``¿y si...?''. \\
+\hline
+12 & Normas informales (``siempre se hizo así'') & Seguir el procedimiento aprobado; si está mal,
+cambiarlo formalmente. \\ \hline
+\end{tabular}
+\end{center}
+
+% ------------------------------------------------------------
+\section*{4. EL ERROR HUMANO}
+
+El psicólogo \textbf{James Reason} distinguió entre:
+\begin{itemize}
+  \item \textbf{Errores} (no intencionales):
+  \begin{itemize}
+    \item \textbf{Deslices:} la intención era correcta pero la acción salió mal (girar la llave
+          equivocada).
+    \item \textbf{Lapsus:} olvidos (no colocar un tornillo, no cerrar una tapa).
+    \item \textbf{Equivocaciones:} el plan estaba mal (diagnóstico equivocado por falta de
+          conocimiento).
+  \end{itemize}
+  \item \textbf{Violaciones} (desvíos intencionales de un procedimiento):
+  \begin{itemize}
+    \item \textbf{Rutinarias:} ``todos lo hacen así'' (no usar el torquímetro).
+    \item \textbf{Situacionales:} para cumplir con un plazo o por falta de recursos.
+    \item \textbf{Excepcionales:} en situaciones fuera de lo común.
+  \end{itemize}
+\end{itemize}
+\textbf{Errores típicos en mantenimiento:} instalaciones incompletas, partes mal instaladas o
+equivocadas, herramientas o materiales olvidados dentro de la aeronave, conectores sin trabar,
+falta de verificación funcional, registros incompletos y \textbf{errores en el pase de turno}.
+
+\paragraph*{La idea clave.} Los errores no se pueden eliminar del todo: las personas se equivocan.
+Lo que sí se puede hacer es \textbf{reducir las condiciones que los provocan}, \textbf{detectarlos}
+(inspecciones, verificaciones) y \textbf{limitar sus consecuencias} (redundancia, defensas).
+
+% ------------------------------------------------------------
+\section*{5. TRABAJO EN EQUIPO, COMUNICACIÓN Y MRM}
+
+\subsubsection*{5.1. Del CRM al MRM}
+Después de accidentes como Tenerife (1977), en los que la comunicación y el liderazgo en la
+cabina fallaron, la industria desarrolló el \textbf{CRM} (\textit{Crew Resource Management}):
+entrenamiento de las tripulaciones en comunicación, liderazgo, toma de decisiones y uso de todos
+los recursos disponibles. En los años noventa, tras accidentes causados por errores de
+mantenimiento, se adaptó a los talleres como \textbf{MRM} (\textit{Maintenance Resource
+Management}).
+
+\subsubsection*{5.2. Contenidos de un programa de MRM}
+\begin{itemize}
+  \item \textbf{Comunicación:} clara, completa, confirmada (``lectura y colación''); por escrito en
+        los pases de turno.
+  \item \textbf{Asertividad:} expresar una preocupación de seguridad aunque el otro tenga más
+        jerarquía. Una fórmula útil: llamar la atención (``Jefe...''), plantear el problema (``veo
+        que...''), proponer una acción (``propongo que...'') y pedir una respuesta (``¿de
+        acuerdo?'').
+  \item \textbf{Trabajo en equipo y liderazgo}, planificación de tareas compartidas.
+  \item \textbf{Conciencia situacional:} saber qué está pasando, qué falta y qué puede pasar.
+  \item \textbf{Toma de decisiones} y manejo del estrés y la fatiga.
+  \item \textbf{Docena sucia} y cultura de reporte.
+\end{itemize}
+
+% ------------------------------------------------------------
+\section*{6. SELECCIÓN E INSTRUCCIÓN DEL PERSONAL}
+\begin{itemize}
+  \item \textbf{Selección:} definir el perfil del puesto (licencias, habilitaciones, experiencia,
+        idioma técnico inglés) y evaluar también actitudes: responsabilidad, trabajo en equipo,
+        atención al detalle.
+  \item \textbf{Instrucción inicial:} sistema de calidad, procedimientos del taller, factores
+        humanos, seguridad laboral.
+  \item \textbf{Instrucción en el puesto} (OJT): bajo supervisión, con registro de las tareas
+        aprendidas.
+  \item \textbf{Cursos de tipo} de aeronaves o equipos (ATA 104).
+  \item \textbf{Instrucción recurrente}: actualización periódica en normas, factores humanos y
+        cambios técnicos.
+  \item Registro de toda la instrucción, porque la autoridad lo audita.
+\end{itemize}
+
+% ------------------------------------------------------------
+\section*{7. PREVENCIÓN DE ERRORES EN EL TALLER}
+\begin{itemize}
+  \item \textbf{Procedimientos y tarjetas de tareas} claros, con pasos verificables.
+  \item \textbf{Listas de verificación} (\textit{checklists}) para las tareas críticas.
+  \item \textbf{Inspección independiente} (doble inspección) de las tareas que, mal hechas, pueden
+        causar una falla catastrófica: controles de vuelo, fijación de motores.
+  \item \textbf{Control de herramientas}: tableros de sombra y conteo al terminar.
+  \item \textbf{Señalización de trabajos incompletos} y \textbf{pase de turno} por escrito.
+  \item \textbf{Manejo de las interrupciones}: marcar el punto, y al retomar volver unos pasos atrás.
+  \item \textbf{Gestión de la fatiga}: límites de horas, descansos, rotación de tareas.
+\end{itemize}
+
+% ------------------------------------------------------------
+\section*{8. REPORTES E INVESTIGACIÓN DE ERRORES}
+
+\subsubsection*{8.1. La cultura justa}
+Si cada error se castiga, la gente lo esconde, y la organización pierde la oportunidad de
+aprender. Una \textbf{cultura justa} (\textit{just culture}) alienta a reportar errores y
+peligros \textbf{sin temor a sanciones}, pero deja claro que no se toleran las conductas
+temerarias, las violaciones deliberadas ni el consumo de alcohol o drogas. El límite está entre
+el \textbf{error honesto} (se aprende de él) y la \textbf{negligencia grave} (se sanciona).
+
+\subsubsection*{8.2. Tipos de reportes}
+\begin{itemize}
+  \item \textbf{Obligatorios:} los sucesos que la norma exige notificar a la autoridad o a la JST
+        (accidentes, incidentes graves, ciertas fallas).
+  \item \textbf{Voluntarios:} errores, peligros o ``casi accidentes'' que cualquiera puede informar,
+        muchas veces en forma confidencial.
+\end{itemize}
+
+\subsubsection*{8.3. El método MEDA}
+El \textbf{MEDA} (\textit{Maintenance Error Decision Aid}), desarrollado por Boeing, es una
+herramienta para investigar los errores de mantenimiento buscando \textbf{por qué} ocurrieron, no
+\textbf{quién} tuvo la culpa. Se basa en la idea de que el técnico no quiere equivocarse: el error
+aparece por \textbf{factores contribuyentes} que la organización puede corregir.
+
+\begin{center}
+\begin{tikzpicture}[node distance=0.32cm, every node/.style={font=\footnotesize, align=center},
+  paso/.style={draw=ppAzul, very thick, rounded corners, fill=ppAzul!8, text width=2.25cm,
+  minimum height=1.25cm}]
+  \node[paso] (a) {\textbf{1. Evento}\\ (demora, falla, daño)};
+  \node[paso, right=of a] (b) {\textbf{2. Error}\\ ¿qué error lo causó?};
+  \node[paso, right=of b] (c) {\textbf{3. Entrevista}\\ con el técnico, sin culpas};
+  \node[paso, right=of c] (d) {\textbf{4. Factores}\\ contribuyentes};
+  \node[paso, right=of d] (e) {\textbf{5. Acciones}\\ correctivas y difusión};
+  \draw[-{Stealth}, thick] (a) -- (b); \draw[-{Stealth}, thick] (b) -- (c);
+  \draw[-{Stealth}, thick] (c) -- (d); \draw[-{Stealth}, thick] (d) -- (e);
+\end{tikzpicture}
+\end{center}
+Los factores contribuyentes se buscan en categorías: información (manuales, tarjetas), equipos y
+herramientas, diseño y configuración de la aeronave, tarea, conocimientos y habilidades, factores
+individuales (fatiga, presión), entorno, organización, liderazgo y supervisión, comunicación.
+
+% ------------------------------------------------------------
+\section*{9. MONITOREO Y AUDITORÍA}
+La organización verifica que sus defensas funcionan mediante \textbf{auditorías internas}
+(documentales y en el puesto de trabajo), \textbf{observación de tareas} por pares entrenados,
+seguimiento de \textbf{indicadores} (errores reportados, fallas repetitivas, retrabajos) y
+verificación de que las acciones correctivas se cumplieron y fueron eficaces.
+
+% ------------------------------------------------------------
+\section*{10. PRIMEROS AUXILIOS EN EL ENTORNO DE MANTENIMIENTO}
+
+\begin{recuadro}
+\textbf{Importante:} esta sección es una introducción. La práctica de RCP y uso del DEA debe
+hacerse con un instructor capacitado y con muñecos de entrenamiento. Ante una emergencia, llamar
+siempre a los servicios de emergencia (\textbf{107} o \textbf{911}) y al servicio médico de la
+empresa o del aeropuerto.
+\end{recuadro}
+
+\paragraph*{La regla PAS.} \textbf{P}roteger (asegurar la escena: cortar la energía, alejar del
+peligro, no convertirse en otra víctima), \textbf{A}visar (llamar a emergencias, dar ubicación
+exacta), \textbf{S}ocorrer (asistir a la víctima).
+
+\begin{center}
+\small
+\begin{tabular}{|p{0.22\linewidth}|p{0.68\linewidth}|}
+\hline
+\textbf{Situación} & \textbf{Qué hacer} \\ \hline
+Persona que no responde y no respira normalmente & Llamar a emergencias, pedir un
+\textbf{DEA} (desfibrilador) y empezar la \textbf{RCP}: compresiones fuertes y rápidas en el centro
+del pecho, de 100 a 120 por minuto, sin interrupciones, hasta que llegue el DEA o la ayuda. \\
+\hline
+\textbf{Electrocución} & No tocar a la víctima hasta \textbf{cortar la energía} (fuente de tierra,
+baterías, interruptor). Luego evaluar y actuar. \\ \hline
+Hemorragia & Presión directa y firme sobre la herida con un apósito o tela limpia. \\ \hline
+Quemadura térmica & Enfriar con agua corriente durante varios minutos; no aplicar cremas ni
+hielo; no despegar la ropa adherida. \\ \hline
+Contacto con químicos (fluidos hidráulicos, combustible) & Lavar con abundante agua; en los ojos,
+lavado prolongado. Consultar la hoja de seguridad del producto. \\ \hline
+Caída de altura & No mover a la víctima (posible lesión de columna), salvo peligro inminente. \\
+\hline
+\end{tabular}
+\end{center}
+
+% ------------------------------------------------------------
+\section*{11. ACTIVIDADES DE LA UNIDAD}
+\begin{enumerate}
+  \item \textbf{SHELL:} analizar una tarea del taller de la escuela con el modelo SHELL e
+        identificar una interfaz problemática en cada letra.
+  \item \textbf{Docena sucia en el taller:} durante una semana, cada estudiante registra situaciones
+        propias en las que apareció alguno de los doce factores y qué defensa podría haber usado.
+  \item \textbf{Simulación de pase de turno (MRM):} ver la actividad práctica a continuación.
+  \item \textbf{Investigación MEDA:} a partir de un error simulado (por ejemplo, un conector sin
+        trabar detectado en la prueba funcional), entrevistar al ``técnico'', completar la planilla
+        de factores contribuyentes y proponer acciones.
+  \item \textbf{Primeros auxilios:} práctica de RCP con muñeco y simulación de rescate de un
+        electrocutado en el taller, con un instructor.
+\end{enumerate}

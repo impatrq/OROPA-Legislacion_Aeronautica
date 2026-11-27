@@ -1,0 +1,11 @@
+Colocar aqui los logos de los organismos (formato png, jpg o pdf) con estos nombres:
+  transporte -> Secretaria de Transporte
+  anac   -> ANAC
+  jst    -> Junta de Seguridad en el Transporte
+  eana   -> Empresa Argentina de Navegacion Aerea
+  orsna  -> ORSNA
+  psa    -> Policia de Seguridad Aeroportuaria
+  fuerza_aerea -> Fuerza Aerea Argentina
+  smn    -> Servicio Meteorologico Nacional
+Ejemplo: logos/organismos/anac.png
+Si falta alguno, el manual muestra un recuadro gris con la sigla.
